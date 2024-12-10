@@ -11,9 +11,14 @@ export default defineNuxtConfig({
     },
   },
 
+  gsap: {
+    composables: true,
+    provide: false,
+  },
+
   modules: [['@nuxtjs/google-fonts', {
       families: {
         Poppins: true,
       }
-  }], '@nuxt/icon'],
+  }], '@nuxt/icon', '@hypernym/nuxt-gsap'],
 })
