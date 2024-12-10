@@ -1,12 +1,11 @@
 <template>
-  <button class="btn py-1 px-2">
+  <button class="btn py-1 px-3 flex items-center justify-center gap-2">
     <slot />
   </button>
 </template>
 <style scoped>
 button {
   font-family: inherit;
-  display: inline-block;
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -24,7 +23,7 @@ button:before {
   z-index: -1;
   background: var(--primary);
   height: 150px;
-  width: 200px;
+  width: 220px;
   border-radius: 50%;
 }
 

@@ -60,7 +60,7 @@ onMounted(() => {
         <div class="flex gap-8 items-center">
           <div
             ref="navs"
-            class="md:flex hidden gap-8 items-center relative"
+            class="md:flex hidden lg:gap-8 gap-4 items-center relative"
             @mouseleave="activeMenu">
             <nuxt-link
               v-for="menu in menus"
@@ -76,7 +76,7 @@ onMounted(() => {
           </div>
 
           <div class="flex gap-2 items-center justify-center">
-            <PrimaryButton>Download</PrimaryButton>
+            <PrimaryButton class="text-md">Download CV<Icon name="i-humbleicons:download-alt" class="size-5" /></PrimaryButton>
 
             <!-- <div class="w-9 md:hidden"> -->
               <LayoutMobileMenu :menus="menus" />
