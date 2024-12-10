@@ -75,10 +75,12 @@ onMounted(() => {
               class="absolute top-full h-1 bg-primary transition-all"></div>
           </div>
 
-          <div class="flex gap-4 items-center justify-center">
+          <div class="flex gap-2 items-center justify-center">
             <PrimaryButton>Download</PrimaryButton>
 
-            <LayoutMobileMenu :menus="menus" />
+            <div class="w-9">
+              <LayoutMobileMenu :menus="menus" />
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 interface Props {
-  menus: any[]
+  menus: any[];
 }
 
 defineProps<Props>();
@@ -14,6 +14,7 @@ const onToggleMenu = () => {
 
 onMounted(() => {
   const menu = document.querySelector('.menu-mobile');
+  const overlay = document.querySelector('.overlay');
   const links = menu.querySelectorAll('.link');
 
   tl.to(menu, {
@@ -21,27 +22,41 @@ onMounted(() => {
     opacity: 1,
     display: 'block',
     ease: 'expo.inOut',
-  })
+  });
 
-  tl.from(links, {
+  tl.to(overlay, {
     duration: 0.75,
-    opacity: 0,
-    y: 20,
-    stagger: 0.1,
+    top: '-50%',
+    right: '-50%',
     ease: 'expo.inOut',
-  }, "-=0.5");
+  });
+
+  tl.from(
+    links,
+    {
+      duration: 0.75,
+      opacity: 0,
+      y: 20,
+      stagger: 0.1,
+      ease: 'expo.inOut',
+    },
+    '-=0.5',
+  );
 
   tl.reverse();
 });
 </script>
 <template>
   <HamburgerButton
-    class="md:hidden"
+    class="md:hidden absolute z-30 top-2 right-2"
     :checked="isShow"
     @click="onToggleMenu" />
 
   <div
-    :class="`menu-mobile absolute top-full left-0 w-full p-4 bg-primary text-white text-center space-y-3 opacity-0 hidden`">
+    class="overlay fixed h-[200%] w-[200%] bg-primary -top-[200%] -right-full !m-0 rounded-full z-10"></div>
+
+  <div
+    :class="`menu-mobile absolute top-0 left-0 w-full py-10 px-4 text-white text-center space-y-3 opacity-0 h-dvh hidden overflow-hidden z-20`">
     <nuxt-link
       v-for="menu in menus"
       :to="menu.url"
