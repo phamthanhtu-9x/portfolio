@@ -72,7 +72,7 @@ onMounted(() => {
 
             <div
               ref="line"
-              class="absolute top-full h-1 bg-primary transition-all"></div>
+              class="absolute top-full h-1 bg-primary transition-all ease-in-out"></div>
           </div>
 
           <div class="flex gap-2 items-center justify-center">
