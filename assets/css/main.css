@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: 'Poppins';
+    height: 100dvh;
+}
+
+#__nuxt {
+    height: 100%;
+}
+
+:root {
+    --primary: #ffd164;
+}

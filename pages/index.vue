@@ -1,5 +1,5 @@
 <template>
-    <div>
-        Index
-    </div>
+  <Container>
+    Home
+  </Container>
 </template>
