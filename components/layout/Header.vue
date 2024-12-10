@@ -51,7 +51,7 @@ const activeMenu = () => {
 
 const onToggleMenu = () => {
   isShow.value = !isShow.value;
-}
+};
 
 onMounted(() => {
   activeMenu();
@@ -84,9 +84,15 @@ onMounted(() => {
           <div class="flex gap-4 items-center justify-center">
             <PrimaryButton>Download</PrimaryButton>
 
-            <HamburgerButton class="md:hidden" :checked="isShow" @click="onToggleMenu" />
+            <HamburgerButton
+              class="md:hidden"
+              :checked="isShow"
+              @click="onToggleMenu" />
 
-            <div :class="`absolute top-full left-0 w-full p-4 bg-primary text-white text-center space-y-3 transition-all ${isShow ? '' : 'opacity-0 invisible'}`">
+            <div
+              :class="`absolute top-full left-0 w-full p-4 bg-primary text-white text-center space-y-3 transition-all ${
+                isShow ? '' : 'opacity-0 invisible'
+              }`">
               <nuxt-link
                 v-for="menu in menus"
                 :to="menu.url"
