@@ -55,7 +55,7 @@ onMounted(() => {
   <div class="relative py-2 flex items-center">
     <Container>
       <div class="flex items-center justify-between">
-        <HighLightText class="text-2xl">Pham Thanh Tu</HighLightText>
+        <HighLightText class="text-3xl font-pacifico">PhamThanhTu</HighLightText>
 
         <div class="flex gap-8 items-center">
           <div
@@ -78,9 +78,9 @@ onMounted(() => {
           <div class="flex gap-2 items-center justify-center">
             <PrimaryButton>Download</PrimaryButton>
 
-            <div class="w-9">
+            <!-- <div class="w-9 md:hidden"> -->
               <LayoutMobileMenu :menus="menus" />
-            </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>

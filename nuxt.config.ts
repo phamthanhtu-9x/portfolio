@@ -19,6 +19,8 @@ export default defineNuxtConfig({
   modules: [['@nuxtjs/google-fonts', {
       families: {
         Poppins: true,
+        'Dancing Script': true,
+        'Pacifico': true,
       }
   }], '@nuxt/icon', '@hypernym/nuxt-gsap'],
 })

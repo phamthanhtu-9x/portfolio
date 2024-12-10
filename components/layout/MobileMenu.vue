@@ -18,16 +18,16 @@ onMounted(() => {
   const links = menu.querySelectorAll('.link');
 
   tl.to(menu, {
-    duration: 0.75,
+    duration: 0.5,
     opacity: 1,
     display: 'block',
     ease: 'expo.inOut',
   });
 
   tl.to(overlay, {
-    duration: 0.75,
+    duration: 2.5,
     top: '-50%',
-    right: '-50%',
+    right: '-100%',
     ease: 'expo.inOut',
   });
 
@@ -48,12 +48,12 @@ onMounted(() => {
 </script>
 <template>
   <HamburgerButton
-    class="md:hidden absolute z-30 top-2 right-2"
+    class="md:hidden z-30"
     :checked="isShow"
     @click="onToggleMenu" />
 
   <div
-    class="overlay fixed h-[200%] w-[200%] bg-primary -top-[200%] -right-full !m-0 rounded-full z-10"></div>
+    class="overlay fixed h-[200%] w-[200%] bg-primary -top-[200%] -right-[50%] !m-0 rounded-full z-10"></div>
 
   <div
     :class="`menu-mobile absolute top-0 left-0 w-full py-10 px-4 text-white text-center space-y-3 opacity-0 h-dvh hidden overflow-hidden z-20`">

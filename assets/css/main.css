@@ -14,3 +14,7 @@ body {
 :root {
     --primary: #ffd164;
 }
+
+.font-pacifico {
+    font-family: 'Pacifico';
+}
