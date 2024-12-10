@@ -55,7 +55,7 @@ onMounted(() => {
   <div class="relative py-2 flex items-center">
     <Container>
       <div class="flex items-center justify-between">
-        <HighLightText class="text-3xl font-pacifico">{{ `<TuPahm />` }}</HighLightText>
+        <HighLightText class="md:text-3xl text-xl font-pacifico">{{ `<TuPahm />` }}</HighLightText>
 
         <div class="flex gap-8 items-center">
           <div
