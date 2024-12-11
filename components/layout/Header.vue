@@ -52,7 +52,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="relative py-2 flex items-center">
+  <div class="relative py-2 flex items-center z-20">
     <Container>
       <div class="flex items-center justify-between">
         <TypoHighLightText class="md:text-3xl text-2xl font-pacifico"

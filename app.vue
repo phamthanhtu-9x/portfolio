@@ -1,13 +1,10 @@
-<script lang="ts" setup>
-import Header from './components/layout/Header'
-import Footer from './components/layout/Footer'
-</script>
+<script lang="ts" setup></script>
 <template>
   <div class="h-full flex flex-col">
-    <Header />
-    <div class="grow">
+    <LayoutHeader />
+    <div class="grow relative z-10">
       <NuxtPage />
     </div>
-    <Footer />
+    <LayoutFooter />
   </div>
 </template>
