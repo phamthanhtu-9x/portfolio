@@ -26,6 +26,10 @@ const icons = [
     tooltip: 'Nuxt JS',
   },
   {
+    name: 'typescript-icon',
+    tooltip: 'Typescript',
+  },
+  {
     name: 'figma',
     tooltip: 'Figma',
   },
