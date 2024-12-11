@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import HighLightText from '../typo/HighLightText';
 const route = useRoute();
 const line = ref();
 const navs = ref();
@@ -27,7 +26,7 @@ const menus = [
   },
 ];
 
-const calLine = (target) => {
+const calLine = (target: any) => {
   const navsX = navs.value.getBoundingClientRect().x;
   const eX = target.getBoundingClientRect().x;
 
@@ -37,7 +36,7 @@ const calLine = (target) => {
   line.value.style.width = target.offsetWidth + 'px';
 };
 
-const onMouseOver = (e) => {
+const onMouseOver = (e: any) => {
   calLine(e.target);
 };
 
@@ -47,6 +46,7 @@ const activeMenu = () => {
 
   calLine(eTarget);
 };
+
 onMounted(() => {
   activeMenu();
 });
@@ -55,7 +55,9 @@ onMounted(() => {
   <div class="relative py-2 flex items-center">
     <Container>
       <div class="flex items-center justify-between">
-        <HighLightText class="md:text-3xl text-xl font-pacifico">{{ `<TuPahm />` }}</HighLightText>
+        <TypoHighLightText class="md:text-3xl text-2xl font-pacifico"
+          >{{ `<TuPahm />` }}</TypoHighLightText
+        >
 
         <div class="flex gap-8 items-center">
           <div
@@ -76,7 +78,11 @@ onMounted(() => {
           </div>
 
           <div class="flex gap-2 items-center justify-center">
-            <PrimaryButton class="text-md">Download CV<Icon name="i-humbleicons:download-alt" class="size-5" /></PrimaryButton>
+            <PrimaryButton class="md:text-md text-sm"
+              ><span class="sm:inline-block hidden">Download</span> CV<Icon
+                name="i-humbleicons:download-alt"
+                class="size-5"
+            /></PrimaryButton>
 
             <LayoutMobileMenu :menus="menus" />
           </div>
