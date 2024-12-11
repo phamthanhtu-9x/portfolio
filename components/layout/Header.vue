@@ -1,30 +1,9 @@
 <script lang="ts" setup>
+import menus from '~/data/menus';
+
 const route = useRoute();
 const line = ref();
 const navs = ref();
-
-const menus = [
-  {
-    text: 'Home',
-    url: '/',
-    name: 'index',
-  },
-  {
-    text: 'About',
-    url: '/about',
-    name: 'about',
-  },
-  {
-    text: 'Experience',
-    url: '/experience',
-    name: 'experience',
-  },
-  {
-    text: 'Contact',
-    url: '/contact',
-    name: 'contact',
-  },
-];
 
 const calLine = (target: any) => {
   const navsX = navs.value.getBoundingClientRect().x;
