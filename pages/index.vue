@@ -63,7 +63,7 @@ const icons = [
         <div class="sm:text-4xl text-3xl mb-3 font-bold">
           FRONT END DEVELOPER
         </div>
-        <div class="sm:text-xl text-lg text-gray-300 mb-6">
+        <div class="sm:text-xl text-lg text-zinc-500 mb-6 font-light">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quas
           aspernatur, fugit dolor obcaecati ad pariatur eveniet, odio veritatis
           cupiditate repellat quam. Rerum alias ipsum aut perferendis enim ipsam
