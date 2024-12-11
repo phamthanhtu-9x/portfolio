@@ -12,6 +12,10 @@ const skills = [
     name: 'Javascript',
   },
   {
+    icon: 'tailwindcss-icon',
+    name: 'Tailwindcss'
+  },
+  {
     icon: 'vue',
     name: 'Vue JS',
   },
@@ -22,6 +26,10 @@ const skills = [
   {
     icon: 'typescript-icon',
     name: 'Typescript',
+  },
+  {
+    icon: 'supabase-icon',
+    name: 'Supabase'
   },
   {
     icon: 'figma',
