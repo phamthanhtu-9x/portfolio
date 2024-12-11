@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import menus from '~/data/menus';
+import information from '~/data/information';
 
 const route = useRoute();
 const line = ref();
@@ -35,7 +36,7 @@ onMounted(() => {
     <Container>
       <div class="flex items-center justify-between">
         <TypoHighLightText class="md:text-3xl text-2xl font-pacifico"
-          >{{ `<TuPahm />` }}</TypoHighLightText
+          >{{ `<${ information.head.title } />` }}</TypoHighLightText
         >
 
         <div class="flex gap-8 items-center">
