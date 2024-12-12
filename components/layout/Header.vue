@@ -36,7 +36,7 @@ onMounted(() => {
     <Container>
       <div class="flex items-center justify-between">
         <TypoHighLightText class="md:text-3xl text-2xl font-pacifico"
-          >{{ `<${ information.head.title } />` }}</TypoHighLightText
+          ><span class="text-black"><</span>{{ information.head.title }}<span class="text-black"> /></span></TypoHighLightText
         >
 
         <div class="flex gap-8 items-center">

@@ -39,7 +39,7 @@ useHead({
           class="xl:w-[600px] xl:h-[600px] lg:w-[400px] lg:h-[400px]"
           autoplay
           loop
-          src="https://lottie.host/a2ce0f8d-2ba6-4c78-8580-e70d55a57111/cAkFrTpNtx.lottie" />
+          src="/lottie/index.lottie" />
       </div>
 
       <div
@@ -48,7 +48,7 @@ useHead({
           class="w-full h-full"
           autoplay
           loop
-          src="https://lottie.host/a35968c6-b029-4803-876f-57899c928424/hDdG9PCDEi.lottie" />
+          src="/lottie/wave.lottie" />
       </div>
     </div>
   </Container>
