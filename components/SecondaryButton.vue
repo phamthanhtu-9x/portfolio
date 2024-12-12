@@ -1,5 +1,12 @@
+<script lang="ts" setup>
+interface Props {
+  type?: 'button' | 'submit'
+}
+
+const { type = 'button' } = defineProps<Props>();
+</script>
 <template>
-  <button class="button py-1.5 px-3 flex items-center justify-center gap-2 rounded-md">
+  <button class="button py-1.5 px-3 flex items-center justify-center gap-2 rounded-md" :type="type">
     <slot />
   </button>
 </template>
