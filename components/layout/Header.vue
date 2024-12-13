@@ -58,6 +58,8 @@ onMounted(() => {
           </div>
 
           <div class="flex gap-2 items-center justify-center">
+            <Switch />
+
             <PrimaryButton class="md:text-md text-sm"
               ><span class="sm:inline-block hidden">Download</span> CV<Icon
                 name="i-humbleicons:download-alt"

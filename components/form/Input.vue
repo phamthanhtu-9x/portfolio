@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 interface Props {
-  name: string,
+  name: string;
   type: string,
-  placeholder?: text,
-  label?: text,
+  placeholder?: string;
+  label?: string;
 }
 
 defineProps<Props>()

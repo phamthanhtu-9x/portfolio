@@ -6,22 +6,32 @@ useHead({
   title: 'Contact me',
 });
 
-const schema = yup.object({
+interface ContactForm {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const validationSchema = yup.object({
   name: yup.string().required(),
   email: yup.string().required().email(),
   message: yup.string().required(),
 });
 
-const onSubmit = (values, actions) => {
+const { handleSubmit, resetForm } = useForm<ContactForm>({
+  validationSchema
+});
+
+const onSubmit = handleSubmit(values => {
   console.log('values', values);
-  actions.resetForm({
+  resetForm({
     values: {
       name: '',
       email: '',
       message: '',
-    },
-  });
-};
+    }
+  })
+})
 </script>
 
 <template>
@@ -39,9 +49,8 @@ const onSubmit = (values, actions) => {
           Contact <span class="text-primary">Me!</span>
         </div>
 
-        <Form
-          @submit="onSubmit"
-          :validation-schema="schema">
+        <form
+          @submit="onSubmit">
           <div class="space-y-4">
             <FormInput
               name="name"
@@ -65,7 +74,7 @@ const onSubmit = (values, actions) => {
               >
             </div>
           </div>
-        </Form>
+        </form>
       </div>
     </div>
   </Container>

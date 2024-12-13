@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 interface Props {
   name: string,
-  placeholder?: text,
-  label?: text,
+  placeholder?: string;
+  label?: string;
 }
 
 defineProps<Props>()
@@ -29,7 +29,7 @@ defineProps<Props>()
 .input:hover,
 .input:focus {
   border: 2px solid var(--primary);
-  box-shadow: 0px 0px 0px 4px rgb(255, 209, 100, 20%);
+  box-shadow: 0px 0px 0px 4px rgba(255, 209, 100, 20%);
   background-color: white;
 }
 </style>
