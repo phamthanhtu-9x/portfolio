@@ -23,8 +23,15 @@ const { handleSubmit, resetForm } = useForm<ContactForm>({
   validationSchema,
 });
 
+const mail = useMail();
+
 const onSubmit = handleSubmit((values) => {
-  console.log('values', values);
+  mail.send({
+    from: values.name,
+    subject: values.email,
+    text: values.message,
+  });
+
   resetForm({
     values: {
       name: '',
