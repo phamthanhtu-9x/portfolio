@@ -1,20 +1,26 @@
 <script lang="ts" setup>
 interface Props {
   name: string;
-  type: string,
+  type: string;
   placeholder?: string;
   label?: string;
 }
 
-defineProps<Props>()
+defineProps<Props>();
 </script>
 <template>
   <div>
     <label class="mb-2">
       {{ label }}
     </label>
-    <Field  class="input px-2 py-1.5 rounded-md border-2 border-gray-200 text-md" :name="name" :type="type" :placeholder="placeholder" />
-    <ErrorMessage :name="name" class="text-red-500" />
+    <Field
+      class="input px-2 py-1.5 rounded-md border-2 border-gray-200 text-md"
+      :name="name"
+      :type="type"
+      :placeholder="placeholder" />
+    <ErrorMessage
+      :name="name"
+      class="text-red-500" />
   </div>
 </template>
 

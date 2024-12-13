@@ -23,7 +23,9 @@ useHead({
         <div class="sm:text-4xl text-3xl mb-3 font-bold uppercase">
           {{ information.title }}
         </div>
-        <div class="sm:text-xl text-lg text-zinc-500 mb-6 font-light">{{ information.descriptions }}</div>
+        <div class="sm:text-xl text-lg text-zinc-500 mb-6 font-light">
+          {{ information.descriptions }}
+        </div>
         <div class="flex flex-wrap gap-4 items-center">
           <Tooltip
             v-for="skill in skills"

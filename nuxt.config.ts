@@ -29,6 +29,6 @@ export default defineNuxtConfig({
     ],
     '@nuxt/icon',
     '@hypernym/nuxt-gsap',
-    '@vee-validate/nuxt'
+    '@vee-validate/nuxt',
   ],
 });

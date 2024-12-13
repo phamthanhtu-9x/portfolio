@@ -6,7 +6,9 @@ interface Props {
 const { type = 'button' } = defineProps<Props>();
 </script>
 <template>
-  <button class="button py-1.5 px-3 flex items-center justify-center gap-2 rounded-md" :type="type">
+  <button
+    class="button py-1.5 px-3 flex items-center justify-center gap-2 rounded-md"
+    :type="type">
     <slot />
   </button>
 </template>
@@ -21,7 +23,7 @@ const { type = 'button' } = defineProps<Props>();
 }
 
 .button:hover {
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .button:active {
@@ -31,7 +33,7 @@ const { type = 'button' } = defineProps<Props>();
 .button:before,
 .button:after {
   position: absolute;
-  content: "";
+  content: '';
   width: 150%;
   left: 50%;
   height: 100%;
@@ -43,10 +45,20 @@ const { type = 'button' } = defineProps<Props>();
 .button:hover:before {
   top: -70%;
   background-image: radial-gradient(circle, var(--primary) 20%, transparent 20%),
-    radial-gradient(circle, transparent 20%, var(--primary) 20%, transparent 30%),
+    radial-gradient(
+      circle,
+      transparent 20%,
+      var(--primary) 20%,
+      transparent 30%
+    ),
     radial-gradient(circle, var(--primary) 20%, transparent 20%),
     radial-gradient(circle, var(--primary) 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, var(--primary) 15%, transparent 20%),
+    radial-gradient(
+      circle,
+      transparent 10%,
+      var(--primary) 15%,
+      transparent 20%
+    ),
     radial-gradient(circle, var(--primary) 20%, transparent 20%),
     radial-gradient(circle, var(--primary) 20%, transparent 20%),
     radial-gradient(circle, var(--primary) 20%, transparent 20%),
@@ -79,7 +91,12 @@ const { type = 'button' } = defineProps<Props>();
   bottom: -70%;
   background-image: radial-gradient(circle, var(--primary) 20%, transparent 20%),
     radial-gradient(circle, var(--primary) 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, var(--primary) 15%, transparent 20%),
+    radial-gradient(
+      circle,
+      transparent 10%,
+      var(--primary) 15%,
+      transparent 20%
+    ),
     radial-gradient(circle, var(--primary) 20%, transparent 20%),
     radial-gradient(circle, var(--primary) 20%, transparent 20%),
     radial-gradient(circle, var(--primary) 20%, transparent 20%),

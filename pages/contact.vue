@@ -20,19 +20,19 @@ const validationSchema = yup.object({
 });
 
 const { handleSubmit, resetForm } = useForm<ContactForm>({
-  validationSchema
+  validationSchema,
 });
 
-const onSubmit = handleSubmit(values => {
+const onSubmit = handleSubmit((values) => {
   console.log('values', values);
   resetForm({
     values: {
       name: '',
       email: '',
       message: '',
-    }
-  })
-})
+    },
+  });
+});
 </script>
 
 <template>
@@ -50,8 +50,7 @@ const onSubmit = handleSubmit(values => {
           Contact <span class="text-primary">Me!</span>
         </div>
 
-        <form
-          @submit="onSubmit">
+        <form @submit="onSubmit">
           <div class="space-y-4">
             <FormInput
               name="name"
@@ -79,13 +78,21 @@ const onSubmit = handleSubmit(values => {
 
         <div class="flex gap-3">
           <Tooltip tooltip="Gmail">
-            <a :href="`mailto:${information.email}`" target="_blank">
-              <Icon name="logos:google-gmail" class="md:size-6 size-5" />
+            <a
+              :href="`mailto:${information.email}`"
+              target="_blank">
+              <Icon
+                name="logos:google-gmail"
+                class="md:size-6 size-5" />
             </a>
           </Tooltip>
           <Tooltip tooltip="Linkedin">
-            <a :href="information.linkedin" target="_blank">
-              <Icon name="logos:linkedin-icon" class="md:size-6 size-5" />
+            <a
+              :href="information.linkedin"
+              target="_blank">
+              <Icon
+                name="logos:linkedin-icon"
+                class="md:size-6 size-5" />
             </a>
           </Tooltip>
         </div>

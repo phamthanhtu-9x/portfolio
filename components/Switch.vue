@@ -1,7 +1,15 @@
 <template>
-  <label for="theme" class="theme">
+  <label
+    for="theme"
+    class="theme">
     <span class="theme-toggle-wrap">
-      <input id="theme" class="theme-toggle" type="checkbox" role="switch" name="theme" value="dark">
+      <input
+        id="theme"
+        class="theme-toggle"
+        type="checkbox"
+        role="switch"
+        name="theme"
+        value="dark" />
       <span class="theme-fill"></span>
       <span class="theme-icon">
         <span class="theme-icon-part"></span>
@@ -54,25 +62,24 @@
   display: block;
   top: 0.6em;
   left: 0.65em;
-  width: .8em;
-  height: .8em;
+  width: 0.8em;
+  height: 0.8em;
 }
 
 .theme-icon-part {
   border-radius: 50%;
-  box-shadow: 0.4em -0.4em 0 0.5em hsl(0,0%,100%) inset;
+  box-shadow: 0.4em -0.4em 0 0.5em hsl(0, 0%, 100%) inset;
   top: calc(50% - 0.5em);
   left: calc(50% - 0.5em);
   width: 1em;
   height: 1em;
   transition: box-shadow var(--transDur) ease-in-out,
-		opacity var(--transDur) ease-in-out,
-		transform var(--transDur) ease-in-out;
+    opacity var(--transDur) ease-in-out, transform var(--transDur) ease-in-out;
   transform: scale(0.5);
 }
 
 .theme-icon-part ~ .theme-icon-part {
-  background-color: hsl(0,0%,100%);
+  background-color: hsl(0, 0%, 100%);
   border-radius: 0.05em;
   top: 50%;
   left: calc(50% - 0.05em);
@@ -122,7 +129,7 @@
 }
 
 .theme-toggle {
-  background-color: hsl(48,90%,85%);
+  background-color: hsl(48, 90%, 85%);
   border-radius: 25% / 50%;
   box-shadow: 0 0 0 0.125em var(--primaryT);
   padding: 0.25em;
@@ -131,14 +138,13 @@
   -webkit-appearance: none;
   appearance: none;
   transition: background-color var(--transDur) ease-in-out,
-		box-shadow 0.15s ease-in-out,
-		transform var(--transDur) ease-in-out;
+    box-shadow 0.15s ease-in-out, transform var(--transDur) ease-in-out;
 }
 
 .theme-toggle:before {
-  background-color: hsl(48,90%,55%);
+  background-color: hsl(48, 90%, 55%);
   border-radius: 50%;
-  content: "";
+  content: '';
   width: 1.65em;
   height: 1.65em;
   margin-top: -1px;
@@ -152,7 +158,7 @@
 
 /* Checked */
 .theme-toggle:checked {
-  background-color: hsl(198,90%,15%);
+  background-color: hsl(198, 90%, 15%);
 }
 
 .theme-toggle:checked:before,
@@ -161,7 +167,7 @@
 }
 
 .theme-toggle:checked:before {
-  background-color: hsl(198,90%,55%);
+  background-color: hsl(198, 90%, 55%);
 }
 
 .theme-toggle:checked ~ .theme-fill {
@@ -169,7 +175,7 @@
 }
 
 .theme-toggle:checked ~ .theme-icon .theme-icon-part:nth-child(1) {
-  box-shadow: 0.2em -0.2em 0 0.2em hsl(0,0%,100%) inset;
+  box-shadow: 0.2em -0.2em 0 0.2em hsl(0, 0%, 100%) inset;
   transform: scale(1);
   /* top: 0.2em; */
   left: -0.1em;
