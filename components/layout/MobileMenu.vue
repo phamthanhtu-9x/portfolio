@@ -13,8 +13,8 @@ const onToggleMenu = () => {
   tl.reversed(!tl.reversed());
 };
 
-const linkTo = (path: string) => {
-  tl.reversed(!tl.reversed());
+const linkTo = async (path: string) => {
+  await tl.reversed(!tl.reversed());
   isShow.value = false;
   router.push({ path })
 }
