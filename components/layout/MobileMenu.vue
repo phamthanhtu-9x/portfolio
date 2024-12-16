@@ -4,6 +4,7 @@ interface Props {
 }
 
 defineProps<Props>();
+const router = useRouter();
 const isShow = ref(false);
 const tl = useGsap.timeline({ paused: true });
 
@@ -11,6 +12,12 @@ const onToggleMenu = () => {
   isShow.value = !isShow.value;
   tl.reversed(!tl.reversed());
 };
+
+const linkTo = (path: string) => {
+  tl.reversed(!tl.reversed());
+  isShow.value = false;
+  router.push({ path })
+}
 
 onMounted(() => {
   const menu = document.querySelector('.menu-mobile');
@@ -62,13 +69,14 @@ onMounted(() => {
 
   <div
     :class="`menu-mobile absolute top-0 left-0 w-full py-10 px-4 text-white text-center space-y-3 opacity-0 h-dvh hidden overflow-hidden z-20`">
-    <nuxt-link
+    <span
       v-for="menu in menus"
       :to="menu.url"
+      @click="linkTo(menu.url)"
       class="block link">
       <span>
         {{ menu.text }}
       </span>
-    </nuxt-link>
+    </span>
   </div>
 </template>
