@@ -10,7 +10,7 @@ const title = computed(() => {
   return type
 });
 const useToast = useToastStore();
-let toastTimeout: any;
+let toastTimeout: NodeJS.Timeout;
 
 const onClose = () => {
   useToast.closeToast();
@@ -209,5 +209,4 @@ watch(() => isShow, () => {
   color: #555;
   cursor: pointer;
 }
-
 </style>
