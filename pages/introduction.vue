@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 useHead({
-  title: 'About me'
+  title: 'Introduction'
 })
 </script>
 <template>
   <Container>
-    About
+    Introduction
   </Container>
 </template>
