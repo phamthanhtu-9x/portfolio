@@ -1,4 +1,6 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const useToast = useToastStore();
+</script>
 <template>
   <div class="h-full flex flex-col">
     <LayoutHeader />
@@ -6,5 +8,9 @@
       <NuxtPage />
     </div>
     <LayoutFooter />
+    <Toast
+      :is-show="useToast.isShow"
+      :type="useToast.type"
+      :message="useToast.message" />
   </div>
 </template>

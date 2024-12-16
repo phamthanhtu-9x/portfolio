@@ -13,6 +13,8 @@ interface ContactForm {
   message: string;
 }
 
+const useToast = useToastStore();
+
 const validationSchema = yup.object({
   name: yup.string().required(),
   email: yup.string().required().email(),
@@ -39,6 +41,8 @@ const onSubmit = handleSubmit((values) => {
       message: '',
     },
   });
+
+  useToast.showToast('success', 'I received. Thanks for contact');
 });
 </script>
 

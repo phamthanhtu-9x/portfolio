@@ -16,36 +16,30 @@ export default defineNuxtConfig({
     provide: false,
   },
 
-  modules: [
-    [
-      '@nuxtjs/google-fonts',
-      {
-        families: {
-          Poppins: true,
-          'Dancing Script': true,
-          Pacifico: true,
-        },
+  modules: [[
+    '@nuxtjs/google-fonts',
+    {
+      families: {
+        Poppins: true,
+        'Dancing Script': true,
+        Pacifico: true,
       },
-    ],
-    '@nuxt/icon',
-    '@hypernym/nuxt-gsap',
-    '@vee-validate/nuxt',
-    [
-      'nuxt-mail', {
-        message: {
-          to: process.env.NUXT_MAIL_TARGET,
-        },
+    },
+  ], '@nuxt/icon', '@hypernym/nuxt-gsap', '@vee-validate/nuxt', [
+    'nuxt-mail', {
+      message: {
+        to: process.env.NUXT_MAIL_TARGET,
+      },
 
-        smtp: {
-          host: process.env.NUXT_MAIL_SMPT,
-          port: process.env.NUXT_MAIL_PORT,
-          secure: true,
-          auth: {
-            user: process.env.NUXT_MAIL_USERNAME,
-            pass: 'qxqy txkd ercu cnpm',
-          }
+      smtp: {
+        host: process.env.NUXT_MAIL_SMPT,
+        port: process.env.NUXT_MAIL_PORT,
+        secure: true,
+        auth: {
+          user: process.env.NUXT_MAIL_USERNAME,
+          pass: 'qxqy txkd ercu cnpm',
         }
       }
-    ],
-  ],
+    }
+  ], '@pinia/nuxt'],
 });
