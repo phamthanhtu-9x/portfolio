@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { ToastType } from '~/types/toast';
+
 interface Props {
   isShow: boolean;
   type: ToastType;

@@ -1,6 +1,8 @@
 <script lang="ts" setup>
+import type { MenuType } from '~/types/menu';
+
 interface Props {
-  menus: any[];
+  menus: MenuType[];
 }
 
 defineProps<Props>();

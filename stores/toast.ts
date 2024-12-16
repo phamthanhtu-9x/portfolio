@@ -1,6 +1,5 @@
 import { defineStore } from "pinia";
-
-export type ToastType = 'warning' | 'error' | 'success'
+import type { ToastType } from "~/types/toast";
 
 export const useToastStore = defineStore('toastStore', {
   state: () => ({
