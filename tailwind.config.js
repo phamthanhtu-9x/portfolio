@@ -25,6 +25,11 @@ export default {
         '2xl': '6rem',
       },
     },
+
+    height: {
+      1: '0.25rem',
+      fs: 'calc(100dvh - 92px)',
+    },
   },
   plugins: [],
 }

@@ -4,7 +4,6 @@
 
 body {
     font-family: 'Poppins';
-    height: 100dvh;
     background-color: #ffffff;
     background-image: radial-gradient(rgba(212, 212, 212, 0.171) 2px, transparent 0);
     background-size: 30px 30px;
@@ -12,7 +11,7 @@ body {
 }
 
 #__nuxt {
-    height: 100%;
+    min-height: 100dvh;
 }
 
 :root {
