@@ -17,6 +17,7 @@ body {
 
 :root {
     --primary: #ffd164;
+    --primary-shadow: rgb(255, 209, 100, 20%);
 }
 
 .font-pacifico {
