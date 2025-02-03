@@ -5,9 +5,14 @@ const menus = [
     name: 'index',
   },
   {
-    text: 'Introduction',
-    url: '/introduction',
-    name: 'introduction',
+    text: 'About',
+    url: '#about',
+    name: 'About',
+  },
+  {
+    text: 'Projects',
+    url: '#projects',
+    name: 'Projects',
   },
   {
     text: 'Contact',

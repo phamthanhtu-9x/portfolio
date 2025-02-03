@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import menus from '~/data/menus';
 import information from '~/data/information';
+import ThemeSwitch from '../ThemeSwitch.vue';
 
 const route = useRoute();
 const line = ref();
@@ -45,13 +46,22 @@ onMounted(() => {
             ref="navs"
             class="md:flex hidden lg:gap-8 gap-4 items-center relative"
             @mouseleave="activeMenu">
-            <nuxt-link
-              v-for="menu in menus"
-              :to="menu.url">
-              <span @mouseover="onMouseOver">
-                {{ menu.text }}
-              </span>
-            </nuxt-link>
+            <div v-for="menu in menus">
+              <nuxt-link
+                v-if="!menu.url.includes('#')"
+                :to="menu.url">
+                <span @mouseover="onMouseOver">
+                  {{ menu.text }}
+                </span>
+              </nuxt-link>
+
+              <a v-else :href="menu.url">
+                <span @mouseover="onMouseOver">
+                  {{ menu.text }}
+                </span>
+              </a>
+            </div>
+
 
             <div
               ref="line"
@@ -59,7 +69,7 @@ onMounted(() => {
           </div>
 
           <div class="flex gap-2 items-center justify-center">
-            <Switch />
+            <ThemeSwitch />
 
             <PrimaryButton class="md:text-md text-sm"
               ><span class="sm:inline-block hidden">Download</span> CV<Icon
