@@ -2,7 +2,7 @@
 
 </script>
 <template>
-  <Container id="project">
+  <Container id="projects">
     <TypoTitleSection title="Highlight" highlight="projects" />
 
     <Card />
