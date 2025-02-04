@@ -20,16 +20,20 @@ const skills = [
     name: 'Vue JS',
   },
   {
+    icon: 'react',
+    name: 'React JS',
+  },
+  {
     icon: 'nuxt-icon',
     name: 'Nuxt JS',
   },
   {
-    icon: 'typescript-icon',
-    name: 'Typescript',
+    icon: 'nextjs-icon',
+    name: 'Next JS',
   },
   {
-    icon: 'supabase-icon',
-    name: 'Supabase'
+    icon: 'typescript-icon',
+    name: 'Typescript',
   },
   {
     icon: 'figma',
