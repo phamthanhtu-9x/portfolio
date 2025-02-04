@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 interface Props {
-  typeArray: string[]
+  typeArray: string[];
 }
 
 const { typeArray } = defineProps<Props>();
@@ -12,7 +12,7 @@ const state = reactive({
   erasingSpeed: 100,
   newTextDelay: 200,
   typeArrayIndex: 0,
-  charIndex: 0
+  charIndex: 0,
 });
 
 function typeText() {
@@ -32,18 +32,21 @@ function typeText() {
 }
 
 function eraseText() {
-  if(state.charIndex > 0) {
-    if(!state.typeStatus) {
+  if (state.charIndex > 0) {
+    if (!state.typeStatus) {
       state.typeStatus = true;
     }
 
-    state.typeValue = typeArray[state.typeArrayIndex].substring(0, state.charIndex - 1);
+    state.typeValue = typeArray[state.typeArrayIndex].substring(
+      0,
+      state.charIndex - 1,
+    );
     state.charIndex -= 1;
     setTimeout(eraseText, state.erasingSpeed);
   } else {
     state.typeStatus = false;
     state.typeArrayIndex += 1;
-    if(state.typeArrayIndex >= typeArray.length) {
+    if (state.typeArrayIndex >= typeArray.length) {
       state.typeArrayIndex = 0;
     }
 
@@ -52,13 +55,17 @@ function eraseText() {
 }
 
 onMounted(() => {
-  setTimeout(typeText, state.newTextDelay + 200)
-})
+  setTimeout(typeText, state.newTextDelay + 200);
+});
 </script>
 <template>
   <span>
     <span class="typed-text">{{ state.typeValue }}</span>
-    <span class="cursor" :class="{'typing': state.typeStatus}">&nbsp;</span>
+    <span
+      class="cursor"
+      :class="{ typing: state.typeStatus }"
+      >&nbsp;</span
+    >
   </span>
 </template>
 <style>
@@ -75,8 +82,14 @@ span.cursor.typing {
 }
 
 @keyframes cursorBlink {
-  49% { background-color: #000; }
-  50% { background-color: transparent; }
-  99% { background-color: transparent; }
+  49% {
+    background-color: #000;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
 }
 </style>
