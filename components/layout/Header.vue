@@ -22,7 +22,14 @@ const onMouseOver = (e: any) => {
 };
 
 const activeMenu = () => {
-  const index = menus.findIndex((menu) => menu.name === route.name);
+  let index;
+
+  if (route.hash) {
+    index = menus.findIndex((menu) => menu.url === route.hash);
+  } else {
+    index = menus.findIndex((menu) => menu.name === route.name);
+  }
+
   const eTarget = navs.value.children[index];
 
   calLine(eTarget);
