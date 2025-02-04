@@ -8,7 +8,7 @@ import skills from '~/data/skills';
   <Container class="relative h-fs flex items-center">
     <div class="md:basis-1/2 relative z-10">
       <div class="sm:text-5xl text-4xl font-pacifico text-primary mb-1">
-        Hello!
+        <Typing :type-array="['Hello!', 'Xin chào!']" />
       </div>
       <div class="sm:text-5xl text-4xl mb-2 font-bold">
         My name's <br class="xl:hidden inline-block" /><span
